@@ -3,7 +3,7 @@
 IMAGE_NAME="reactapp"
 TAG="latest"
 
-DOCKERFILE="/reactjs-demo-final/Dockerfile"
+DOCKERFILE="Dockerfile"
 
 docker build -t "${IMAGE_NAME}:${TAG}" -f "${DOCKERFILE}" .
 
