@@ -6,6 +6,8 @@ RUN npm install
 
 COPY . .
 
+RUN npm install react-scripts --save
+
 RUN npm run build
 
 EXPOSE 80
