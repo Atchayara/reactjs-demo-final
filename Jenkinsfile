@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Login into DockerHub') {
             steps {
+                sh 'sudo chmod 666 /var/run/docker.sock'
                 withCredentials([usernamePassword(credentialsId: "${DOCKER_REGISTRY_CREDS}", passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin docker.io"
                 }
