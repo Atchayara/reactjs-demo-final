@@ -10,16 +10,16 @@ pipeline {
             }
         }
 
-        stage('Changing the File Permission') {
+        stage('Build') {
             steps {
                 sh 'chmod +x Build.sh'
-                sh 'chmod +x deploy.sh'
+                sh './Build.sh'
             }
         }
 
-        stage('Executing the File') {
+        stage('Deploy') {
             steps {
-                sh './Build.sh'
+                sh 'chmod +x deploy.sh'
                 sh './deploy.sh'
             }
         }
