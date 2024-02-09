@@ -8,6 +8,5 @@ DOCKERFILE="Dockerfile"
 
 docker build -t "${IMAGE_NAME}:${TAG}" -f "${DOCKERFILE}" .
 
-docker stop react
-doker rm react
+
 
