@@ -12,7 +12,7 @@ pipeline {
 
         stage('Changing the File Permission') {
             steps {
-                sh 'chmod +x build.sh'
+                sh 'chmod +x Build.sh'
                 sh 'chmod +x deploy.sh'
             }
         }
