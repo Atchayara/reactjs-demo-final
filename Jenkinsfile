@@ -19,7 +19,7 @@ pipeline {
 
         stage('Executing the File') {
             steps {
-                sh './build.sh'
+                sh './Build.sh'
                 sh './deploy.sh'
             }
         }
