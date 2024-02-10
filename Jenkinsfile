@@ -17,11 +17,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                withCredentials([file(credentialsId: 'PemKeyy', variable: 'EC2_PEM_KEY')]) {
                     sh 'chmod +x deploy.sh'
                     sh './deploy.sh'
                 }
             }
         }
     }
-}
